@@ -30,7 +30,8 @@ services:
         expose:
             - 9000
     mysql-back:
-        image: mysql:latest
+        image: mariadb:latest
+        command: --sql_mode=""
         ports:
             - "8091:3306"
         volumes:
